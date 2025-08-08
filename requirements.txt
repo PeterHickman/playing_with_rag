@@ -1,0 +1,6 @@
+# Python 3.12.11
+
+pypdf
+mdit_plain
+ollama
+chromadb

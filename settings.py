@@ -1,0 +1,8 @@
+EMDEDDING_MODEL="nomic-embed-text"
+COLLECTION_NAME="docs"
+MODEL="gpt-oss:latest"
+CHROMADB="./chromadb"
+RESULTS=5
+THRESHOLD=0.6
+CHUNK_SIZE=200
+CHUNK_OVERLAP=20
