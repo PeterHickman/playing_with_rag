@@ -1,3 +1,5 @@
+import sys
+
 import ollama
 import chromadb
 
@@ -7,6 +9,8 @@ class RAGQuery:
     def __init__(self, collection):
         self.collection = collection
         self.debug = False
+
+        self._check_models()
 
     def query(self, prompt, debug):
         self.debug = debug
@@ -74,3 +78,22 @@ class RAGQuery:
                     r.append(line)
 
         return " ".join(r).strip()
+
+    def _check_models(self):
+        l = ollama.list()
+        self._find_model(l.models, settings.EMDEDDING_MODEL)
+        self._find_model(l.models, settings.MODEL)
+
+    def _find_model(self, l, name):
+        if ':' not in name:
+            name = name + ":latest"
+
+        found = False
+        for m in l:
+            if m.model == name:
+                found = True
+                break
+
+        if not found:
+            print(f"Model {name} named in settings is not pulled to ollama")
+            sys.exit(1)
