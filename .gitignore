@@ -1,3 +1,5 @@
 .venv/
+better_rag/venv/
+better_rag/elrond_investigation/
 __pycache__/
 chromadb/
