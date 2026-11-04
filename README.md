@@ -44,3 +44,6 @@ So why didn't I just use Langchain? It's a wonderful framework to set up you own
 
 There is a perfectly good one available but it does result in much repeated text. I dumped the test documents to see and there was quite a lot of repetition, especially of page titles. Felt like it could be polluting the data and how hard was it to write my own?
 
+## The better version
+
+In my continuing quest to understand RAG better I watched the [Python Simplified](https://www.youtube.com/@PythonSimplified) video on building your own [RAG](https://www.youtube.com/watch?v=oZYlrooPgvs) which I worked on and didn't want to lose so here it is
